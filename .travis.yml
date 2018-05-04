@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.4.1
+  
+services:
+  - postgresql
+
+script:
+  - mkdir -p spec && bundle exec rspec spec
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y postgresql-server-dev-9.2  
+
+before_script:
+  - psql -c 'create database oauth_test;' -U postgres
