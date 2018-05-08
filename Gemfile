@@ -13,3 +13,12 @@ group :test do
     # Added at 2018-05-04 10:42:56 +0100 by chrisharrop:
     gem "rubocop", "~> 0.55.0"
 end
+
+# Added at 2018-05-08 17:53:49 +0100 by chrisharrop:
+gem "bcrypt", "~> 3.1"
+
+# Added at 2018-05-08 17:54:24 +0100 by chrisharrop:
+gem "data_mapper", "~> 1.2"
+
+# Added at 2018-05-08 17:54:40 +0100 by chrisharrop:
+gem "dm-postgres-adapter", "~> 1.2"
