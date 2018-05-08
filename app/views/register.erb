@@ -1,0 +1,16 @@
+<h1>Register</h1>
+
+<% if @user %>
+    <p>Welcome, <%= @user.email %>!</p>
+<% else %>
+    <p>Please <a href="/login">log in</a></p>
+    <div>
+        <form action="/register" method="post" id="new_user_form">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="user_email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="user_password" />
+            <button type="submit">Sign Up!</button>
+        </form>
+    </div>
+<% end %>
