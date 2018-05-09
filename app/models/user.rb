@@ -10,6 +10,7 @@ class User
   property :email, String, :unique => true
   property :password_hash, Text
 
+  validates_presence_of :email
   validates_uniqueness_of :email
 
   def password
