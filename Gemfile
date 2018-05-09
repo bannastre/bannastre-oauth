@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-
 source "https://rubygems.org"
+
+ruby "2.4.1"
 
 # Added at 2018-05-08 09:23:05 +0100 by chrisharrop:
 gem "sinatra", "~> 2.0"
