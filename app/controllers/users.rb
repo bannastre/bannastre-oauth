@@ -1,10 +1,16 @@
 class App < Sinatra::Base
-    get '/register' do
-        erb :register
+    get "/users/new" do
+        erb :"users/new"
     end
 
-    post '/register' do
-        @user = User.create(email: params[:email], password: params[:password])
-        erb :register
+    post "/users" do
+        user = User.new(email: params[:email], password: params[:password])
+        if user.save
+            session[:user_id] = user.id
+        else
+            flash[:notice] = user.errors.full_messages
+        end
+
+        redirect "/"
     end
 end 
