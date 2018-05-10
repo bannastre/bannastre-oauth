@@ -1,0 +1,7 @@
+<% if @auth %>
+    <p>Auth Code: <%= @auth.auth_code %></p>
+<% else %>
+    <form method='post' action='/authorize'>
+        <input type='submit' value='Generate New Code'>
+    </form>
+<% end %>
